@@ -1,0 +1,23 @@
+h1>{{title}}</h1>
+<p>Welcome to the Posts</p>
+
+
+{{#each allPosts}}
+<h4>{{this.name}}</h4>
+<h4>{{this.type}}</h4>
+
+<h6>Modify:</h6>
+<form action="/update-place" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="password" placeholder="type" name="type">
+
+  <input type="hidden" name="_id" value="{{_id}}">
+  <input type="Submit" value="Modify">
+</form>
+
+
+<form action="/delete" method="POST">
+ <input type="hidden" name="_id" value="{{_id}}">
+  <input type="Submit" value="Delete">
+</form>
+{{/each}}

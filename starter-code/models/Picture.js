@@ -4,7 +4,8 @@ const Schema   = mongoose.Schema;
 const pictureSchema = new Schema({
   name: String,
   path: String,
-  originalName: String
+  originalName: String,
+  user_id: String
 
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
